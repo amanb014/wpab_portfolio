@@ -38,6 +38,6 @@ add_action('wp_head', 'wpab_public_scripts');
 ===========================*/
 
 //Loads in the file for creating a new custom post type called "projects".
-require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects');
+require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects.php');
 
 ?>
