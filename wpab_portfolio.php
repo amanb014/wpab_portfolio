@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Project Items
+Plugin Name: Portfolio Management
 Plugin URI: http://amanbhimani.com
 Description: A plugin to manage experience, projects, and portfolio items and display with shortcodes on the front-end.
 Version: 0.1
