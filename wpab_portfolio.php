@@ -37,9 +37,15 @@ add_action('wp_head', 'wpab_public_scripts');
 	SEGREGATED FUNCTIONS 
 ===========================*/
 
+//Registers the skill taxonomy with wordpress. This is registered under both experience and projects.
+require_once(plugin_dir_path(__FILE__) . 'wpab_skill_taxonomy.php');
+
 //Loads in the file for creating a new custom post type called "projects".
 require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects.php');
 
 //Loads in the file for creating a new custom post type called "experience".
 require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_experience.php');
+
+
+
 ?>

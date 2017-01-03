@@ -49,7 +49,8 @@ function wpab_register_cpt_experience() {
         'thumbnail',
         'revisions'
         ),
-      'can_export' => true
+      'can_export' => true,
+      'taxonomies' => ['skill']
   );
 
   //Registers the post type with wordpress
