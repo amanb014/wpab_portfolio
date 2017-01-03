@@ -33,4 +33,11 @@ function wpab_public_scripts() {
 add_action('admin_enqueue_scripts', 'wpab_portfolio_admin_scripts');
 add_action('wp_head', 'wpab_public_scripts');
 
+/*===========================
+	SEGREGATED FUNCTIONS 
+===========================*/
+
+//Loads in the file for creating a new custom post type called "projects".
+require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects');
+
 ?>
