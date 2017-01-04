@@ -47,7 +47,9 @@ function wpab_register_cpt_project() {
       'supports' => array(
         'title',
         'thumbnail',
-        'revisions'
+        'revisions',
+        'excerpt',
+        'editor'
         ),
       'can_export' => true,
       'taxonomies' => ['skill']

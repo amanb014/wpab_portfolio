@@ -43,6 +43,9 @@ require_once(plugin_dir_path(__FILE__) . 'wpab_skill_taxonomy.php');
 //Loads in the file for creating a new custom post type called "projects".
 require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects.php');
 
+//Adds the metabox for project custom post type.
+require_once(plugin_dir_path(__FILE__) . 'wpab_project_metabox.php');
+
 //Loads in the file for creating a new custom post type called "experience".
 require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_experience.php');
 
