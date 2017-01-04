@@ -55,4 +55,7 @@ require_once(plugin_dir_path(__FILE__) . 'wpab_projecttype_taxonomy.php');
 //Registers new taxonomy called Experience Type for experience types.
 require_once(plugin_dir_path(__FILE__) . 'wpab_experiencetype_taxonomy.php');
 
+//Registers new taxonomy called Stidy Fields.
+require_once(plugin_dir_path(__FILE__) . 'wpab_studyfield_taxonomy.php');
+
 ?>
