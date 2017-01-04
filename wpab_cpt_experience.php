@@ -47,7 +47,9 @@ function wpab_register_cpt_experience() {
       'supports' => array(
         'title',
         'thumbnail',
-        'revisions'
+        'revisions',
+        'editor',
+        'excerpt'
         ),
       'can_export' => true,
       'taxonomies' => ['skill']

@@ -34,20 +34,8 @@ add_action('admin_enqueue_scripts', 'wpab_portfolio_admin_scripts');
 add_action('wp_head', 'wpab_public_scripts');
 
 /*===========================
-	SEGREGATED FUNCTIONS 
+	CUSTOM TAXONOMIES
 ===========================*/
-
-//Registers the skill taxonomy with wordpress. This is registered under both experience and projects.
-require_once(plugin_dir_path(__FILE__) . 'wpab_skill_taxonomy.php');
-
-//Loads in the file for creating a new custom post type called "projects".
-require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects.php');
-
-//Adds the metabox for project custom post type.
-require_once(plugin_dir_path(__FILE__) . 'wpab_project_metabox.php');
-
-//Loads in the file for creating a new custom post type called "experience".
-require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_experience.php');
 
 //Registers new taxonomy called Project Type for project types.
 require_once(plugin_dir_path(__FILE__) . 'wpab_projecttype_taxonomy.php');
@@ -57,5 +45,25 @@ require_once(plugin_dir_path(__FILE__) . 'wpab_experiencetype_taxonomy.php');
 
 //Registers new taxonomy called Stidy Fields.
 require_once(plugin_dir_path(__FILE__) . 'wpab_studyfield_taxonomy.php');
+
+//Registers the skill taxonomy with wordpress. This is registered under both experience and projects.
+require_once(plugin_dir_path(__FILE__) . 'wpab_skill_taxonomy.php');
+
+/*===========================
+	CUSTOM POST TYPES
+===========================*/
+
+//Loads in the file for creating a new custom post type called "projects".
+require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects.php');
+
+//Loads in the file for creating a new custom post type called "experience".
+require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_experience.php');
+
+/*===========================
+	METABOXES
+===========================*/
+
+//Adds the metabox for project custom post type.
+require_once(plugin_dir_path(__FILE__) . 'wpab_project_metabox.php');
 
 ?>
