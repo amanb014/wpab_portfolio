@@ -1,8 +1,8 @@
 <?php
-function wpab_register_project_type_taxonomy() {
+function wpab_register_experiencetype_taxonomy() {
 
-	$s 	= 'Project Type';
-	$p 	= 'Project Types';
+	$s 	= 'Experience Type';
+	$p 	= 'Experience Types';
 
 	$labels = array (
 		'name' => $p,
@@ -33,8 +33,8 @@ function wpab_register_project_type_taxonomy() {
 		'rewrite' => array('slug' => 'project_type'),
 		'sort' => true
 	);
-	register_taxonomy('project_type', 'project', $args);
+	register_taxonomy('experience_type', 'experience', $args);
 }
-add_action('init', 'wpab_register_project_type_taxonomy');
+add_action('init', 'wpab_register_experiencetype_taxonomy');
 
 ?>
