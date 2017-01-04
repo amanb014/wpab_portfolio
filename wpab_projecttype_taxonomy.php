@@ -1,8 +1,8 @@
 <?php
-function wpab_register_skill_taxonomy() {
+function wpab_register_project_type_taxonomy() {
 
-	$s 	= 'Skill';
-	$p 	= 'Skills';
+	$s 	= 'Project Type';
+	$p 	= 'Project Types';
 
 	$labels = array (
 		'name' => $p,
@@ -29,12 +29,12 @@ function wpab_register_skill_taxonomy() {
 		'show_in_nav_menus' => true,
 		'description' => 'The skills used in an experience or project.',
 		'show_admin_column' => true,
-		'hierarchical' => true,
-		'rewrite' => array('slug' => 'skill'),
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'project_type'),
 		'sort' => true
 	);
-	register_taxonomy('skill', null, $args);
+	register_taxonomy('project_type', 'project', $args);
 }
-add_action('init', 'wpab_register_skill_taxonomy');
+add_action('init', 'wpab_register_project_type_taxonomy');
 
 ?>

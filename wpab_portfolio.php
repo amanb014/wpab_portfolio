@@ -46,6 +46,7 @@ require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_projects.php');
 //Loads in the file for creating a new custom post type called "experience".
 require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_experience.php');
 
-
+//Registers new taxonomy called Project Type for project types.
+require_once(plugin_dir_path(__FILE__) . 'wpab_projecttype_taxonomy.php');
 
 ?>
