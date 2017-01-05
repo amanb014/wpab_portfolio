@@ -8,7 +8,6 @@ Author: Aman Bhimani
 Author URI: http://amanbhimani.com/
 */
 
-define('WP_DEBUG', true);
 if( !defined('ABSPATH')) {
   exit;
 }
