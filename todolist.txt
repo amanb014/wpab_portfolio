@@ -1,0 +1,5 @@
+TODO LIST:
+-- Add new meta box for featured
+		-- 'Homepage Featured'
+		-- 'Field-type featured'
+-- Add shortcode functionality for featured posts only
