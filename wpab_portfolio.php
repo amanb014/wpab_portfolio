@@ -48,6 +48,9 @@ require_once(plugin_dir_path(__FILE__) . 'wpab_studyfield_taxonomy.php');
 //Registers the skill taxonomy with wordpress. This is registered under both experience and projects.
 require_once(plugin_dir_path(__FILE__) . 'wpab_skill_taxonomy.php');
 
+//Registers the featured_for taxonomy with wordpress. This is for featured projects on homepage and field-specific pages.
+require_once(plugin_dir_path(__FILE__) . 'wpab_featured_taxonomy.php');
+
 /*===========================
 	CUSTOM POST TYPES
 ===========================*/

@@ -30,6 +30,11 @@ function wpab_register_display_projects_shortcode($atts, $content = null) {
 											'field'    => 'slug',
 											'terms'    => $atts['field'],
 										),
+										array(
+											'taxonomy' => 'featured_for',
+											'field'    => 'slug',
+											'terms'    => $atts['field'],
+										),
 									),
 			)
 	);
