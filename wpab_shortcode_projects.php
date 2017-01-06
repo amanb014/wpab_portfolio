@@ -4,7 +4,8 @@ function wpab_register_display_projects_shortcode($atts, $content = null) {
 	$atts = shortcode_atts( array(
 		'count' => 5,
 		'field' => 'computer-science',
-		'pagination' => 'on'
+		'pagination' => 'on',
+		'featured' => 'none'
 	), $atts );
 
 	//Pagination is dependent on this.
@@ -12,6 +13,29 @@ function wpab_register_display_projects_shortcode($atts, $content = null) {
 
 	$pagination = $atts['pagination'] == 'on' ? false : true;
 
+
+	if($atts['featured'] != 'none') {
+		$tax_array = array(
+						array(
+							'taxonomy' => 'study_field',
+							'field'    => 'slug',
+							'terms'    => $atts['field'],
+							),
+							array(
+							'taxonomy' => 'featured_for',
+							'field'    => 'slug',
+							'terms'    => $atts['featured'],
+							),
+					);
+	} else {
+		$tax_array = array(
+						array(
+							'taxonomy' => 'study_field',
+							'field'    => 'slug',
+							'terms'    => $atts['field'],
+							),
+					);
+	}
 
 	//The query for the post type, to get all the posts.
 	$query_results = new WP_Query(
@@ -24,18 +48,7 @@ function wpab_register_display_projects_shortcode($atts, $content = null) {
 			'no_found_rows' 	=> $pagination,
 			'posts_per_page' 	=> $atts['count'],
 			'paged' 			=> $paged,
-			'tax_query' 		=> array(
-										array(
-											'taxonomy' => 'study_field',
-											'field'    => 'slug',
-											'terms'    => $atts['field'],
-										),
-										array(
-											'taxonomy' => 'featured_for',
-											'field'    => 'slug',
-											'terms'    => $atts['field'],
-										),
-									),
+			'tax_query' 		=> $tax_array,
 			)
 	);
 
