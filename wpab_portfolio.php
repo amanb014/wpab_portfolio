@@ -65,4 +65,11 @@ require_once(plugin_dir_path(__FILE__) . 'wpab_cpt_experience.php');
 //Adds the metabox for project custom post type.
 require_once(plugin_dir_path(__FILE__) . 'wpab_project_metabox.php');
 
+
+/*===========================
+  SHORTCODES
+===========================*/
+//Adds the metabox for project custom post type.
+require_once(plugin_dir_path(__FILE__) . 'wpab_shortcode_projects.php');
+
 ?>
