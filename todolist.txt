@@ -3,3 +3,4 @@ TODO LIST:
 		-- 'Homepage Featured'
 		-- 'Field-type featured'
 -- Add shortcode functionality for featured posts only
+-- Add shortcode for listing work experience
