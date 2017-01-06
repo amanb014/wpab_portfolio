@@ -25,12 +25,12 @@ function wpab_portfolio_admin_scripts() {
 
 //Function that loads the public CSS for the display of the portfolio items. These will be used in the shortcodes.
 function wpab_public_scripts() {
-	wp_enqueue_style( 'readinglist-css', plugins_url( 'scripts/css/wpab_portfolio_public.css', __FILE__ ) );
+	wp_enqueue_style( 'readinglist-css', plugins_url( 'scripts/css/wpab_portfolio_public.css', __FILE__ ));
 }
 
 //Hook into the admin_enqueue_scripts, and wp_head for loading the scripts
 add_action('admin_enqueue_scripts', 'wpab_portfolio_admin_scripts');
-add_action('wp_head', 'wpab_public_scripts');
+add_action('wp_enqueue_scripts', 'wpab_public_scripts');
 
 /*===========================
 	CUSTOM TAXONOMIES
