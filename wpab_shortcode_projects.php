@@ -3,7 +3,7 @@ function wpab_register_display_projects_shortcode($atts, $content = null) {
 	//if one of the parameters is not defined from the shortcode, these are the defaults to be used.
 	$atts = shortcode_atts( array(
 		'count' => 5,
-		'field' => 'computer-science',
+		'field' => 'all',
 		'pagination' => 'on',
 		'featured' => 'none'
 	), $atts );
@@ -14,7 +14,7 @@ function wpab_register_display_projects_shortcode($atts, $content = null) {
 	$pagination = $atts['pagination'] == 'on' ? false : true;
 
 
-	if($atts['featured'] != 'none') {
+	if(($atts['featured'] != 'none') && ($atts['field'] != 'all')) {
 		$tax_array = array(
 						array(
 							'taxonomy' => 'study_field',
@@ -27,13 +27,21 @@ function wpab_register_display_projects_shortcode($atts, $content = null) {
 							'terms'    => $atts['featured'],
 							),
 					);
+	} else if(($atts['featured'] != 'none') && ($atts['field'] == 'all')) {
+		$tax_array = array(
+						array(
+						'taxonomy' => 'featured_for',
+						'field'    => 'slug',
+						'terms'    => $atts['featured'],
+						),
+					);
 	} else {
 		$tax_array = array(
 						array(
-							'taxonomy' => 'study_field',
-							'field'    => 'slug',
-							'terms'    => $atts['field'],
-							),
+						'taxonomy' => 'study_field',
+						'field'    => 'slug',
+						'terms'    => $atts['field'],
+						),
 					);
 	}
 
